@@ -1,0 +1,21 @@
+Intro text area example
+
+We realize that you have many choices when you shop and thank you for choosing GSC Corp. We stand behind our products and want to be 100% satisfied with your shopping experience. Please complete this form and include it with your return or exchange package. Returns must be in new condition and in original packaging, postmarked within 30 days of order date. Any questions, call us 123.456.7890 Mon-Fri 9am-5pm  PST, or email:noemail@gsccorp.com. Please use a return shipping method that provides proof of delivery and insurance. GSC Corp is not responsible for and cannot issue refunds for returned merchandise lost in transit.
+
+
+Return / Exchange text area example
+
+In order to Exchange an item, please mark the Exchange box next to that item. If you'd like to Return that item, please mark the Return box next to that item. See example below.
+
+
+Return/Exchange Code(s) examples
+
+Too Large
+Too Small
+Too Short
+Too Long
+Didn't like
+Didn't Look Like the Website
+Poor Quality
+Defective (Please Describe Below)
+Other (Please Describe Below)

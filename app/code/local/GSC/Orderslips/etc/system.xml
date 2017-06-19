@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <gsc translate="label" module="orderslips">
+            <label>GSC Extensions</label>
+            <sort_order>9999</sort_order>
+        </gsc>
+    </tabs>
+    <sections>
+        <orderslips translate="label" module="orderslips">
+            <label>Order Slips</label>
+            <tab>gsc</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <!-- RETURN / EXCHANGE -->
+                <rma_general translate="label">
+                    <label>Return / Exchange (Printable Form) General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabler translate="label">
+                            <label>Enable</label>
+                            <comment>Enable Return / Exchange Form.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabler>
+                        <button translate="label">
+                            <label>Show Order View Button</label>
+                            <comment>Enable button (in order view) for the Return / Exchange form.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                    </fields>
+                </rma_general>
+                <rma_inputs translate="label">
+                    <label>Return / Exchange (Printable Form) Configuration Details</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <introtext translate="label">
+                            <label>Intro text area</label>
+                            <comment>MAX of 770 characters</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </introtext>
+                        <returntext translate="label">
+                            <label>Return / Exchange text area</label>
+                            <comment>MAX of 201 characters</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </returntext>
+                        <heading_retexch translate="label">
+                            <label>Return/Exchange Codes Information</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </heading_retexch>
+                        <num_setting translate="label">
+                            <label>Return/Exchange Code Number Type</label>
+                            <comment>Can choose number type here (e.g. - 1, 01, 001, A1 or A01).</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>GSC_Orderslips/system_config_source_dropdown_numbertypes</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </num_setting>
+                        <spacer_add translate="label">
+                            <label>Add/Subrtact spacing after Code Number Type?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>GSC_Orderslips/system_config_source_dropdown_spacervalue</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </spacer_add>
+                        <labels translate="label">
+                            <label>Return/Exchange Code(s)</label>
+                            <comment><![CDATA[Only <strong>9 codes</strong> allowed at this time. <br /><em><strong>Note:</strong> Labels above 9 will be ignored for now</em>.]]></comment>
+                            <tooltip><![CDATA[This is where the images of locations for these labels will go <img src="http://localhost:8888/magento1510/skin/frontend/default/default/images/logo.gif" />]]></tooltip>
+                            <frontend_type>select</frontend_type>
+                            <frontend_model>GSC_Orderslips/adminhtml_textfields</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </labels>
+                        <heading_example translate="label">
+                            <label>Example Products Information</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </heading_example>
+                        <ex_prodname translate="label">
+                            <label>Example: Product Name</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If not set, default value "Example Product Name" will be used.</comment>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ex_prodname>
+                        <ex_sku translate="label">
+                            <label>Example: SKU</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If not set, default value "example-sku" will be used.</comment>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ex_sku>
+                        <ex_price translate="label">
+                            <label>Example: Price</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If not set, default value "$39.00" will be used.</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ex_price>
+                        <heading_shipping translate="label">
+                            <label>Shipping Information</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </heading_shipping>
+                        <hours_operation translate="label">
+                            <label>Hours of Operation (as you want it displayed)</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If not set, default value "Mon-Fri 9am-5pm" will be used.</comment>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hours_operation>
+                        <email_contact translate="label">
+                            <label>Which email contact would you like to use?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>GSC_Orderslips/system_config_source_dropdown_emailcontact</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </email_contact>
+                        <shipping_enabler translate="label">
+                            <label>Enable Shipping Labels (Customer cut-out labels).</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shipping_enabler>
+                        <exchangelabel translate="label">
+                            <label>Exchange shipping label text</label>
+                            <comment>MAX of 201 characters</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <shipping_enabler>1</shipping_enabler>
+                            </depends>
+                        </exchangelabel>
+                        <returnlabel translate="label">
+                            <label>Return shipping label text</label>
+                            <comment>MAX of 201 characters</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>101</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <shipping_enabler>1</shipping_enabler>
+                            </depends>
+                        </returnlabel>
+                    </fields>
+                </rma_inputs>
+                <!-- GIFT RECEIPT -->
+                <giftreceipt translate="label">
+                    <label>Gift Receipt (Printable Form) General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabler translate="label">
+                            <label>Enable</label>
+                            <comment>Enable Gift Receipt.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabler>
+                        <button translate="label">
+                            <label>Show Order View Button</label>
+                            <comment>Enable button (in order view) for the Gift Receipt form.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                    </fields>
+                </giftreceipt>
+            </groups>
+        </orderslips>
+    </sections>
+</config>
